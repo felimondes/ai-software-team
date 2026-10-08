@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hello World App</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background: #f7f7f8;
+        color: #1f2937;
+      }
+      main {
+        text-align: center;
+        background: white;
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        min-width: 280px;
+      }
+      button {
+        appearance: none;
+        border: 0;
+        border-radius: 8px;
+        background: #2563eb;
+        color: white;
+        padding: 0.75rem 1.25rem;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+      button:hover {
+        background: #1d4ed8;
+      }
+      #message {
+        margin-top: 1rem;
+        font-size: 1.25rem;
+        min-height: 1.5em;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <button id="helloButton" type="button">Show Hello World</button>
+      <div id="message" aria-live="polite"></div>
+    </main>
+
+    <script>
+      const button = document.getElementById('helloButton');
+      const message = document.getElementById('message');
+
+      button.addEventListener('click', () => {
+        message.textContent = 'Hello World';
+      });
+    </script>
+  </body>
+</html>
